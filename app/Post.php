@@ -35,5 +35,12 @@ class Post extends Model
     }
 
 
+    //Retornar mi nuevo texto formateado..
+
+    public function getGetExcerptAttribute() //para extraer texto del body y sustituirlo por leer mas..
+    {
+        return substr($this->body, 0, 140);
+
+    }//end_function
 
 }

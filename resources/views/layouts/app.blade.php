@@ -26,7 +26,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
 
                     <img src="{{asset('images/linux1.png')}}", alt="" width="60" height="70">
-                   Laravel Linux
+                   Laravel-Linux
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 

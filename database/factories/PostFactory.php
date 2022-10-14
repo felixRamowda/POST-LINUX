@@ -7,9 +7,9 @@ use Faker\Generator as Faker;
 $factory->define(Post::class, function (Faker $faker) {
 
     return [
-        'user_id' => 1,
-        'title'   => $faker->sentence(),
-        'body'    => $faker ->text(800),  //se crea un texto de 800 caracteres
+         'user_id' => 1,
+         'title'   => $faker->sentence(),
+         'body'    => $faker ->text(800),  //se crea un texto de 800 caracteres
     ];
 
 });

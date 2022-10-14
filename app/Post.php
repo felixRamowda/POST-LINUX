@@ -3,13 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
-/**
- * Sus modelos deben usar el rasgo Sluggable, que tiene un
- * método abstracto sluggable()que necesitas definir. Aquí es
- * donde se establece cualquier configuración específica del modelo.
-*/
-
+use App\User;
 use Cviebrock\EloquentSluggable\Sluggable;
 
 class Post extends Model

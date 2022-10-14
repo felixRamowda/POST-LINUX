@@ -4,16 +4,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-         @foreach ($posts as $post )
+
+
              <div class="card mb-4">
             <div class="card-body">
                              <h4 class="card-title">{{ $post->title}}</h4>
-                             <p class="card-text">
-                                {{ $post->get_excerpt }}
-
-                                <a href="{{ route('post',$post)}}">leer mas</a>
-
-                             </p>
+                             <p class="card-text">{{ $post-> body }}</p>
                              <p class="text-muted mb-0">
                                 <em>
                                     &ndash; {{   $post->user->name }}
@@ -24,11 +20,7 @@
                        </div>
                  </div>
 
-            @endforeach
 
-
-            <!--Escribimos $posts que es el que trae todos los post  y llamamos al metodo links -->
-            {{ $posts->links()}}
 
 
         </div>

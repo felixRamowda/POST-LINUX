@@ -26,7 +26,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
 
                     <img src="{{asset('images/linux1.png')}}", alt="" width="60" height="70">
-                   Laravel-Linux1S
+                   Laravel-Linux
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 
@@ -56,7 +56,14 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
-                        @else
+                        <!-- hacemos la configuracion para cuando no somos invitados: -->
+                            @else
+                            <li class="nav-item">
+                                <a href="{{ route('posts.index') }}" class="nav-link">
+                                Articulos
+                                </a>
+                            </li>
+                           <!--------------------------------------------------------------- -->
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

@@ -37,11 +37,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * Hacemos la relacion: un usuario puede tener muchos post pero un post solo
+     * pueder pertenecer a un usuario, en este caso la relacion es de 1 a M
+     * */
     public function post()
     {
         return $this->hasMany(Post::class);
     }
 
+    //la base de datos cuenta con la configuracion pero siempre debemos hacer
+    //la configuracion en laravel
 
 
 }

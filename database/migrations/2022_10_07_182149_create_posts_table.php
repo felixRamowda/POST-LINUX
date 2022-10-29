@@ -27,6 +27,7 @@ class CreatePostsTable extends Migration
 
             /**
              * user_id que hace referencia al id que esta en la tabla: users
+             * esta es uan relacion entre tablas como las que se puden tener en sql server
              */
             $table->foreign("user_id")->references("id")->on("users");
 

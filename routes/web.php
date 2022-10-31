@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'PageController@posts')->name('POST');
+Route::get('/', 'PageController@posts')->name('POSTS');
 Route::get('blog/{post}', 'PageController@post')->name('post');
 /**
  * 'blog/{post}'     hace referencia al parametro post en el controlador: PageController

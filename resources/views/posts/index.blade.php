@@ -3,11 +3,16 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Articulos
-                    <a href="{{route('posts.create')}}" class="btn btn-sm btn-primary float-right" >
-                    crear</a>
+                    <a href="{{route('posts.create')}}" class="" >
+                       <button type="button" class="btn btn-lg btn-primary float-right">
+                        <i class="bi bi-plus-circle-fill"></i>
+                        Crear
+                       </button>
+
+                </a>
                 </div>
 
                 <div class="card-body">
@@ -17,42 +22,58 @@
                         </div>
                     @endif
 
-                 <table class="table">
-                   <thead>
+                <table class="table">
+                <thead>
                     <tr>
+
                         <th>ID</th>
                         <th>Titulo</th>
+                        <th>Fecha</th>
+
                         <th colspan="2">&nbsp;</th>
-                        <th></th>
+
+
                     </tr>
-                   </thead>
-                   <tbody>
-                      @foreach ($posts as $post )
-                          <tr>
+
+                </thead>
+                <tbody>
+                    @foreach ($posts as $post )
+                        <tr>
                             <td>
                                 {{$post->id}}
                             </td>
                             <td>{{$post->title}}</td>
+                            <td>{{$post->created_at->format('d M Y')}}</td>
+
                             <td>
-                                <a href="{{ route('posts.edit', $post)}}" class="btn btn-primary btn-sm">
-                                Editar
+
+
+
+                            <a href="{{ route('posts.edit', $post)}}" class=" ">
+                                 <button class="btn btn-secondary btn-sm" type="button">
+                                    <i class="bi bi-pencil-square"></i>
+                                    Editar
+                                 </button>
                             </a>
                             </td>
                             <td>
-                              <form action=" {{route("posts.destroy", $post)}} " method="POST">
+                            <form action=" {{route("posts.destroy", $post)}} " method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <input type="submit"
-                                value="Eliminar"
-                                class="bt btn-sm btn-danger"
+                                <button class="btn btn-danger btn-sm" type="submit"
                                 onclick="return confirm('¿Desea Eliminar?')">
+                                <i class="bi bi-trash-fill"></i>
+                                Eliminar
+                                </button>
+
+
                             </form>
 
                         </td>
-                          </tr>
-                      @endforeach
-                   </tbody>
-                 </table>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
 
                 </div>
             </div>

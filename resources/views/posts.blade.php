@@ -1,12 +1,11 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10 ">
          @foreach ($posts as $post )
              <div class="card mb-4">
-            <div class="card-body">
+            <div class="card-body shadow-lg p-3 mb-1"> <!-- agremos una sombra a cada post: shadow-lg p-3 mb-1-->
                              <h4 class="card-title">{{ $post->title}}</h4>
                              <p class="card-text">
                                 {{ $post->get_excerpt }}

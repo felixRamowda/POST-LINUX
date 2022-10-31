@@ -11,7 +11,7 @@ class PageController extends Controller
     public function posts()
     {
         //Esta vista retorna todos los posts en plural
-       return view('posts', [
+       return view('posts',  [
 
             'posts' => Post::with('user')->latest()->paginate()
             /**

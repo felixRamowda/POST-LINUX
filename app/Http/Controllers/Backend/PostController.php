@@ -19,6 +19,7 @@ class PostController extends Controller
 
      $posts = Post::orderBy('id', 'asc')->get();
 
+
       return view('posts.index', compact('posts'));
     }
 
@@ -27,9 +28,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+
+     public function create()
+    {   //Retorna la vista que esta en la carpeta: 'posts con el nombre create' VERIFICAR
+        return view('posts.create');
     }
 
     /**

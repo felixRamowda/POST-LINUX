@@ -23,21 +23,20 @@
                     @endif
 
                 <table class="table">
-                <thead>
+                <thead> <!-- Encabezado de la tabla -->
                     <tr>
 
                         <th>ID</th>
                         <th>Titulo</th>
                         <th>Fecha</th>
-
                         <th colspan="2">&nbsp;</th>
 
 
                     </tr>
 
                 </thead>
-                <tbody>
-                    @foreach ($posts as $post )
+                <tbody> <!-- Contenido de la tabla -->
+                    @foreach ($posts as $post ) <!-- Este foreach nos servira para colocar de forma dinamica todo el contenido-->
                         <tr>
                             <td>
                                 {{$post->id}}

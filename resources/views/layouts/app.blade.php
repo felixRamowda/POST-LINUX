@@ -61,7 +61,7 @@
                             @else
                             <li class="nav-item">
                                 <a href="{{ route('posts.index') }}" class="nav-link">
-                                Articulos
+                                Articulos-Publicados
                                 </a>
                             </li>
                            <!-------------------------------bonton login-------------------------------- -->

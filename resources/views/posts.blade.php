@@ -6,7 +6,9 @@
          @foreach ($posts as $post )
              <div class="card mb-4">
             <div class="card-body shadow-lg p-3 mb-1"> <!-- agremos una sombra a cada post: shadow-lg p-3 mb-1-->
-                             <h4 class="card-title">{{ $post->title}}</h4>
+
+
+                <h4 class="card-title">{{ $post->title}}</h4>
                              <p class="card-text">
                                 {{ $post->get_excerpt }}
 
@@ -14,12 +16,32 @@
 
                              </p>
                              <p class="text-muted mb-0">
-                                <em>
-                                    &ndash; {{   $post->user->name }}
-                                </em>
-                                {{$post->created_at->format('d M Y')}}
-                             </p>
+                                @if ($post->image)
 
+                                <div class="row">
+                                    <div class="col-6 mx-auto text-center">
+                                        <img src="{{$post->get_image}}" class="card-img">
+
+                                    </div>
+                                </div>
+
+
+                                @elseif ($post->iframe)
+
+                                  <div class="embed-responsive embed-responsive-16by9">
+                                    {!! $post->iframe !!}
+
+                                  </div>
+
+
+                                @endif
+
+
+                             </p>
+                             <em>
+                                &ndash; {{   $post->user->name }}
+                            </em>
+                            {{$post->created_at->format('d M Y')}}
                        </div>
                  </div>
 

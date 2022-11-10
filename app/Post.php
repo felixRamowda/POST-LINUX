@@ -7,7 +7,8 @@ use App\User;
 use Cviebrock\EloquentSluggable\Sluggable;
 
 class Post extends Model
-{ use Sluggable;
+{
+    use Sluggable;
 
     protected $fillable = [
         'title', 'body', 'iframe','image', 'user_id'
@@ -42,4 +43,26 @@ class Post extends Model
 
     }//end_function
 
+
+
+    public function getGetImageAttribute() //para extraer texto del body y sustituirlo por leer mas..
+    {
+        if($this->image)
+        {
+            return url("storage/$this->image");
+        }
+
+    }//end_function
+
+/**
+ *  para acceder a la carpeta necesitamos permisos
+ * para eso nos vamos a la terminal 'php artisan storage:link'
+ *
+ */
+
+
+
+
+
 }
+

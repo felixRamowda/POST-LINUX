@@ -16,8 +16,8 @@
 Post-Linux se trata de la creacio de un blog donde Vamos a tener un titulo y un continido
 este contenido puede tener una imagen, un video o inclusive un pódcast  todo esto para poner en practica el **CRUD **
 <h2>Capturas<a href='' target='_blank'><img src='https://i.postimg.cc/NMsP8pph/public-pos.png' border='0' alt='public-pos'/></a></h2>
-<a href='' target='_blank'><img src='https://i.postimg.cc/tJSmJpzY/pos2.png' border='0' alt='pos2'/></a>
-<a href='' target='_blank'><img src='https://i.postimg.cc/W42QSN1f/pos.png' border='0' alt='pos'/></a>
+<a href='https://postimg.cc/T5bcH8F6' target='_blank'><img src='https://i.postimg.cc/T5bcH8F6/pos2.png' border='0' alt='pos2'/></a>
+/
 <a href='' target='_blank'><img src='https://i.postimg.cc/Pf9TGmzB/atice-pos.png' border='0' alt='atice-pos'/></a>
 <a href='' target='_blank'><img src='https://i.postimg.cc/d0RnHp0H/articulos-pos.png' border='0' alt='articulos-pos'/></a>
 <a href='' target='_blank'><img src='https://i.postimg.cc/MZccDRHN/crear-articulos-post.png' border='0' alt='crear-articulos-post'/></a>
